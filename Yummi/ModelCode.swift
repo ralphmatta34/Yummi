@@ -17,10 +17,10 @@ struct Ingredient {
     
     func display() -> String {
         return """
-             Name: \(name)
-             Quantity: \(quantity) units
-             Category: \(category)
-             Expiry date: \(expDate)
+             Name: \(self.name)
+             Quantity: \(self.quantity) units
+             Category: \(self.category)
+             Expiry date: \(self.expDate)
              """
     }
 
