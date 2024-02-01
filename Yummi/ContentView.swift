@@ -10,7 +10,8 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @State private var ingredients = [Ingredient(name: "Tomato", quantity: 5.0, unit: "kg", category: "Fruit", expDate: "Jan 26th")]
+    @State private var ingredients = [Ingredient(name: "Tomato", quantity: 5.0, unit: "kg", category: "Fruit", expDate: "2 Feb"),
+                                      Ingredient(name: "Apple", quantity: 2.0, unit: "pcs", category: "Fruit", expDate: "3 Feb")]
     @State private var index: Int = 0
     @State private var newName: String = ""
     @State private var newQuantity: Int = 0
@@ -36,7 +37,12 @@ struct ContentView: View {
                 TextField(text: $newName, prompt: Text("Enter the name")) {
                     Text("Name")
                 }
-                Stepper("Quantity: \(newQuantity)", value: $newQuantity, in: 0...100)
+                Slider(
+                       value: $newQuantity,
+                       in: 0...100,
+                       step: 0.5
+                )
+                Text("\(newQuantity)")
                 TextField(text: $newUnit, prompt: Text("Enter the unit")) {
                     Text("Unit")
                 }
@@ -46,11 +52,13 @@ struct ContentView: View {
                 TextField(text: $newExpDate, prompt: Text("Enter the expiry date")) {
                     Text("Expiry Date")
                 }
+                Button(action: {
+                    ingredients.append(Ingredient(name: newName, quantity: newQuantity, unit: newUnit, category: newCategory, expDate: newExpDate))
+                }, label: {
+                    Text("Add")
+                })
             }
-            
         }
-        
-        
     }
 }
 

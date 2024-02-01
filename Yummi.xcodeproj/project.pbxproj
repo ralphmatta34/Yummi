@@ -14,7 +14,7 @@
 		B3B49C172B628F7900F5586E /* YummiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B49C162B628F7900F5586E /* YummiTests.swift */; };
 		B3B49C212B628F7900F5586E /* YummiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B49C202B628F7900F5586E /* YummiUITests.swift */; };
 		B3B49C232B628F7900F5586E /* YummiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B49C222B628F7900F5586E /* YummiUITestsLaunchTests.swift */; };
-		B3B49C432B62925600F5586E /* ModelCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B49C422B62925600F5586E /* ModelCode.swift */; };
+		B3F4F20A2B6BC93800FFAA09 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4F2092B6BC93800FFAA09 /* Ingredient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,7 @@
 		B3B49C1C2B628F7900F5586E /* YummiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YummiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3B49C202B628F7900F5586E /* YummiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummiUITests.swift; sourceTree = "<group>"; };
 		B3B49C222B628F7900F5586E /* YummiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummiUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		B3B49C422B62925600F5586E /* ModelCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCode.swift; sourceTree = "<group>"; };
+		B3F4F2092B6BC93800FFAA09 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				B3B49C072B628F7600F5586E /* ContentView.swift */,
-				B3B49C422B62925600F5586E /* ModelCode.swift */,
+				B3F4F2092B6BC93800FFAA09 /* Ingredient.swift */,
 				B3B49C052B628F7600F5586E /* YummiApp.swift */,
 				B3B49C092B628F7900F5586E /* Assets.xcassets */,
 				B3B49C0B2B628F7900F5586E /* Preview Content */,
@@ -260,8 +260,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3F4F20A2B6BC93800FFAA09 /* Ingredient.swift in Sources */,
 				B3B49C082B628F7600F5586E /* ContentView.swift in Sources */,
-				B3B49C432B62925600F5586E /* ModelCode.swift in Sources */,
 				B3B49C062B628F7600F5586E /* YummiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
