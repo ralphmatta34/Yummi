@@ -10,11 +10,13 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @State private var ingredients = [Ingredient(name: "Tomato", quantity: 5.0, unit: "kg", category: "Fruit", expDate: "2 Feb"),
-                                      Ingredient(name: "Apple", quantity: 2.0, unit: "pcs", category: "Fruit", expDate: "3 Feb")]
+    @State private var ingredients = [
+        Ingredient(name: "Tomato", quantity: 5.0, unit: "kg", category: "Fruit", expDate: "2 Feb"),
+        Ingredient(name: "Apple", quantity: 2.0, unit: "pcs", category: "Fruit", expDate: "3 Feb")
+    ]
     @State private var index: Int = 0
     @State private var newName: String = ""
-    @State private var newQuantity: Int = 0
+    @State private var newQuantity: Double = Double()
     @State private var newUnit: String = ""
     @State private var newCategory: String = ""
     @State private var newExpDate: String = ""
@@ -34,15 +36,11 @@ struct ContentView: View {
             })
             
             Form {
-                TextField(text: $newName, prompt: Text("Enter the name")) {
-                    Text("Name")
+                TextField("Enter the name", text: $newName)
+                HStack {
+                    Text("\(String(format: "%.1f", newQuantity))")
+                    Slider(value: $newQuantity, in: 0...100)
                 }
-                Slider(
-                       value: $newQuantity,
-                       in: 0...100,
-                       step: 0.5
-                )
-                Text("\(newQuantity)")
                 TextField(text: $newUnit, prompt: Text("Enter the unit")) {
                     Text("Unit")
                 }
@@ -53,7 +51,7 @@ struct ContentView: View {
                     Text("Expiry Date")
                 }
                 Button(action: {
-                    ingredients.append(Ingredient(name: newName, quantity: newQuantity, unit: newUnit, category: newCategory, expDate: newExpDate))
+                    ingredients.append(Ingredient(name: newName, quantity: Double(newQuantity), unit: newUnit, category: newCategory, expDate: newExpDate))
                 }, label: {
                     Text("Add")
                 })
