@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B348CA472B723CD700BC422A /* RecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B348CA462B723CD700BC422A /* RecipesView.swift */; };
 		B350A3FA2B6D58A100145D07 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B350A3F92B6D58A100145D07 /* Recipe.swift */; };
 		B3B49C062B628F7600F5586E /* YummiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B49C052B628F7600F5586E /* YummiApp.swift */; };
 		B3B49C082B628F7600F5586E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B49C072B628F7600F5586E /* ContentView.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B348CA462B723CD700BC422A /* RecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesView.swift; sourceTree = "<group>"; };
 		B350A3F92B6D58A100145D07 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		B3B49C022B628F7600F5586E /* Yummi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yummi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3B49C052B628F7600F5586E /* YummiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummiApp.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				B3B49C072B628F7600F5586E /* ContentView.swift */,
+				B348CA462B723CD700BC422A /* RecipesView.swift */,
 				B3F4F2092B6BC93800FFAA09 /* Ingredient.swift */,
 				B3B49C052B628F7600F5586E /* YummiApp.swift */,
 				B3B49C092B628F7900F5586E /* Assets.xcassets */,
@@ -265,6 +268,7 @@
 			files = (
 				B3F4F20A2B6BC93800FFAA09 /* Ingredient.swift in Sources */,
 				B3B49C082B628F7600F5586E /* ContentView.swift in Sources */,
+				B348CA472B723CD700BC422A /* RecipesView.swift in Sources */,
 				B3B49C062B628F7600F5586E /* YummiApp.swift in Sources */,
 				B350A3FA2B6D58A100145D07 /* Recipe.swift in Sources */,
 			);
