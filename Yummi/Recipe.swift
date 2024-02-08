@@ -17,7 +17,8 @@ struct Recipe {
     #if DEBUG
     static let examples = [
         Recipe(name: "Fried egg", ingredients: [Ingredient(name: "Egg", quantity: 2.0, unit: "pcs", category: "Poultry", expDate: "7 Feb")], isFavourite: false, rating: 8.3),
-        Recipe(name: "Tea", ingredients: [Ingredient(name: "Tea leaves", quantity: 1.0, unit: "bag", category: "Hot drink", expDate: "1 Apr"), Ingredient(name: "Hot water", quantity: 500.0, unit: "mL", category: "Beverage", expDate: "31 Dec")], isFavourite: false, rating: 6.7)
+        Recipe(name: "Tea", ingredients: [Ingredient(name: "Tea leaves", quantity: 1.0, unit: "bag", category: "Hot drink", expDate: "1 Apr"), Ingredient(name: "Hot water", quantity: 500.0, unit: "mL", category: "Beverage", expDate: "31 Dec")], isFavourite: false, rating: 6.7),
+        Recipe(name: "Pizza", ingredients: [Ingredient(name: "Dough", quantity: 2.0, unit: "kg", category: "Baked", expDate: "8 Feb"), Ingredient(name: "Tomato", quantity: 5.0, unit: "kg", category: "Fruit", expDate: "2 Feb"), Ingredient(name: "Cheese", quantity: 3.0, unit: "kg", category: "Dairy", expDate: "7 Feb")], isFavourite: true, rating: 9.6)
     ]
     #endif
     
