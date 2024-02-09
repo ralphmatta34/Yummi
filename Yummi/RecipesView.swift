@@ -15,7 +15,7 @@ struct RecipesView: View {
     var body: some View {
         List {
             Section(content: {
-                ForEach(recipes, id:\.name) { recipe in
+                ForEach(recipes, id:\.id) { recipe in
                     Text("\(recipe.name)")
                 }
             })

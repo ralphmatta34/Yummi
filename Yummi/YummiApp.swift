@@ -11,7 +11,8 @@ import SwiftUI
 struct YummiApp: App {
     var body: some Scene {
         WindowGroup {
-            RecipesView(recipes: Recipe.examples)
+//            RecipesView(recipes: Recipe.examples)
+            ContentView()
         }
     }
 }
