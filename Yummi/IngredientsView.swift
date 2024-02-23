@@ -19,43 +19,50 @@ struct IngredientsView: View {
     @State private var newUnit: String = ""
     @State private var newCategory: String = ""
     @State private var newExpDate: String = ""
-    
+    @State private var addNewIngredient: Bool = true
+    @State private var showAllIngredients: Bool = true
+
     var body: some View {
         NavigationView {
-            Form {
-                Section(header: Text("Current Ingredient")) {
-                    Text("\(ingredients[index].display())")
-                        .padding()
-                    
-                    Button("Next Ingredient", action: {
-                        if index != ingredients.count-1 {
-                            index += 1
-                        } else {
-                            index = 0
+            VStack {
+                Toggle("Show All Ingredients", isOn: $showAllIngredients)
+                    .padding()
+                Toggle("Add New Ingredient", isOn: $addNewIngredient)
+                    .padding()
+                Form {
+                    if showAllIngredients {
+                        Section(header: Text("All Ingredients")) {
+                            ForEach(ingredients, id: \.name) { ingredient in
+                                Text("\(ingredient.display())")
+                            }
+                            .onDelete(perform: { indexSet in
+                                ingredients.remove(atOffsets: indexSet)
+                            })
                         }
-                    })
-                }
-
-                Section(header: Text("Add New Ingredient")) {
-                    TextField("Enter the name", text: $newName)
-                    HStack {
-                        Text("\(String(format: "%.1f", newQuantity))")
-                        Slider(value: $newQuantity, in: 0...100)
                     }
-                    TextField(text: $newUnit, prompt: Text("Enter the unit")) {
-                        Text("Unit")
+                    if addNewIngredient {
+                        Section(header: Text("Add New Ingredient")) {
+                            TextField("Enter the name", text: $newName)
+                            HStack {
+                                Text("\(String(format: "%.1f", newQuantity))")
+                                Slider(value: $newQuantity, in: 0...100)
+                            }
+                            TextField(text: $newUnit, prompt: Text("Enter the unit")) {
+                                Text("Unit")
+                            }
+                            TextField(text: $newCategory, prompt: Text("Enter the category")) {
+                                Text("Category")
+                            }
+                            TextField(text: $newExpDate, prompt: Text("Enter the expiry date")) {
+                                Text("Expiry Date")
+                            }
+                            Button(action: {
+                                ingredients.append(Ingredient(name: newName, quantity: Double(newQuantity), unit: newUnit, category: newCategory, expDate: newExpDate))
+                            }, label: {
+                                Text("Add")
+                            })
+                        }
                     }
-                    TextField(text: $newCategory, prompt: Text("Enter the category")) {
-                        Text("Category")
-                    }
-                    TextField(text: $newExpDate, prompt: Text("Enter the expiry date")) {
-                        Text("Expiry Date")
-                    }
-                    Button(action: {
-                        ingredients.append(Ingredient(name: newName, quantity: Double(newQuantity), unit: newUnit, category: newCategory, expDate: newExpDate))
-                    }, label: {
-                        Text("Add")
-                    })
                 }
             }
         }
