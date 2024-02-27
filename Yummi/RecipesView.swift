@@ -13,13 +13,31 @@ struct RecipesView: View {
     @State var recipes: [Recipe]
     
     var body: some View {
-        List {
-            Section(content: {
-                ForEach(recipes, id:\.id) { recipe in
-                    Text("\(recipe.name)")
+        NavigationStack {
+            List(recipes) { recipe in
+                NavigationLink(recipe.name) {
+                    SpecificRecipeView(recipe: recipe)
                 }
-            })
+            }
+            .navigationTitle("Recipes")
+            .navigationBarTitleDisplayMode(.large)
         }
+        
+        
+        
+        
+        
+        
+        
+        
+//        List {
+//            Section(content: {
+//                ForEach(recipes, id:\.id) { recipe in
+//                    NavigationLink(destination: IngredientsView(), label: { Text("\(recipe.name)")
+//                    })
+//                }
+//            })
+//        }
     }
 }
 

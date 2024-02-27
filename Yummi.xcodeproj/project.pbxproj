@@ -18,6 +18,7 @@
 		B3B49C232B628F7900F5586E /* YummiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B49C222B628F7900F5586E /* YummiUITestsLaunchTests.swift */; };
 		B3E382DA2B76250C001AEC58 /* IngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E382D92B76250C001AEC58 /* IngredientsView.swift */; };
 		B3F4F20A2B6BC93800FFAA09 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F4F2092B6BC93800FFAA09 /* Ingredient.swift */; };
+		B3FB92DF2B8DEFEA004FB9F5 /* SpecificRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FB92DE2B8DEFEA004FB9F5 /* SpecificRecipeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		B3B49C222B628F7900F5586E /* YummiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YummiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B3E382D92B76250C001AEC58 /* IngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsView.swift; sourceTree = "<group>"; };
 		B3F4F2092B6BC93800FFAA09 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		B3FB92DE2B8DEFEA004FB9F5 /* SpecificRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificRecipeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				B3B49C092B628F7900F5586E /* Assets.xcassets */,
 				B3B49C0B2B628F7900F5586E /* Preview Content */,
 				B350A3F92B6D58A100145D07 /* Recipe.swift */,
+				B3FB92DE2B8DEFEA004FB9F5 /* SpecificRecipeView.swift */,
 			);
 			path = Yummi;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3FB92DF2B8DEFEA004FB9F5 /* SpecificRecipeView.swift in Sources */,
 				B3F4F20A2B6BC93800FFAA09 /* Ingredient.swift in Sources */,
 				B3E382DA2B76250C001AEC58 /* IngredientsView.swift in Sources */,
 				B3B49C082B628F7600F5586E /* ContentView.swift in Sources */,

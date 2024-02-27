@@ -14,7 +14,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Toggle("Display recipes view", isOn: $recipesView)
+            Toggle("Display Recipes", isOn: $recipesView)
                 .padding()
             
             if recipesView {
