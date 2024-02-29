@@ -16,12 +16,7 @@ struct Ingredient {
     var expDate: String
     
     func display() -> String {
-        return """
-                Name: \(self.name)
-                Quantity: \(self.quantity) \(self.unit)
-                Category: \(self.category)
-                Expiry date: \(self.expDate)
-                """
+        return "\((self.quantity*10.0).rounded()/10.0) \(self.unit) of \(self.name)"
     }
 
 }

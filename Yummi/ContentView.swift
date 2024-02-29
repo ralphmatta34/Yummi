@@ -13,14 +13,16 @@ struct ContentView: View {
     @State var recipesView: Bool = false
     
     var body: some View {
-        VStack {
-            Toggle("Display Recipes", isOn: $recipesView)
-                .padding()
-            
-            if recipesView {
-                RecipesView(recipes: Recipe.examples)
-            } else {
-                IngredientsView()
+        NavigationStack {
+            VStack {
+                Toggle("Display Recipes", isOn: $recipesView)
+                    .padding()
+                
+                if recipesView {
+                    RecipesView(recipes: Recipe.examples)
+                } else {
+                    IngredientsView()
+                }
             }
         }
     }

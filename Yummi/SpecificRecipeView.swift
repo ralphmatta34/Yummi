@@ -33,7 +33,7 @@ struct SpecificRecipeView: View {
         recipe.ingredients
     }
     var body: some View {
-        NavigationStack {
+        VStack {
             Text("Rating")
                 .bold()
             Text("\(stars)")
@@ -54,5 +54,5 @@ struct SpecificRecipeView: View {
 }
 
 #Preview {
-    SpecificRecipeView(recipe: Recipe(name: "Fried egg", ingredients: [Ingredient(name: "Egg", quantity: 2.0, unit: "pcs", category: "Poultry", expDate: "7 Feb")], isFavourite: false, rating: 8.3))
+    SpecificRecipeView(recipe: Recipe(name: "Pizza", ingredients: [Ingredient(name: "Dough", quantity: 2.0, unit: "kg", category: "Baked", expDate: "8 Feb"), Ingredient(name: "Tomato", quantity: 5.0, unit: "kg", category: "Fruit", expDate: "2 Feb"), Ingredient(name: "Cheese", quantity: 3.0, unit: "kg", category: "Dairy", expDate: "7 Feb")], isFavourite: true, rating: 9.6))
 }
