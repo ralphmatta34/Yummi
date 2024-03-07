@@ -15,11 +15,11 @@ struct RecipesView: View {
     
     var body: some View {
         VStack {
-            if searchText != String() {
-                Text("Searching for \(searchText)...")
+            if searchResults.count == 0 {
+                Text("No Results Found")
             }
             List {
-                ForEach(searchResults, id:\.self) { recipe in
+                ForEach(searchResults) { recipe in
                     NavigationLink(recipe.name) {
                         SpecificRecipeView(recipe: recipe)
                     }

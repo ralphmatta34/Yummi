@@ -57,6 +57,11 @@ struct IngredientsView: View {
                         }
                         Button(action: {
                             ingredients.append(Ingredient(name: newName, quantity: Double(newQuantity), unit: newUnit, category: newCategory, expDate: newExpDate))
+                            newName = String()
+                            newUnit = String()
+                            newCategory = String()
+                            newExpDate = String()
+                            newQuantity = Double()
                         }, label: {
                             Text("Add")
                         })
