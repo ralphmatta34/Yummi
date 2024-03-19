@@ -14,7 +14,7 @@ struct RecipesView: View {
     @State private var searchText: String = String()
     
     var body: some View {
-        VStack {
+        NavigationStack {
             if searchResults.count == 0 {
                 Text("No Results Found")
             }

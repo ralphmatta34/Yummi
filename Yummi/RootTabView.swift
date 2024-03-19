@@ -12,12 +12,12 @@ struct RootTabView: View {
         TabView {
             IngredientsView()
                 .tabItem {
-                    Image(systemName: "square.and.pencil")
-                    Text("Add Ingredient")
+                    Image(systemName: "carrot")
+                    Text("Ingredients")
                 }
             RecipesView(recipes: Recipe.examples)
                 .tabItem {
-                    Image(systemName: "carrot")
+                    Image(systemName: "fork.knife")
                     Text("Recipes")
                 }
         }
